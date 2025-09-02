@@ -1,11 +1,15 @@
 <?php
-$totalbelanja = "250000";
-if ($totalbelanja >= 50000) {
-    echo "Selamat Anda Mendapatkan Diskon 50%";
+$totalbelanja = 600000;
+$discon = 0;
+
+if ($totalbelanja >= 500000) {
+    $discon = 0.2 * $totalbelanja;
 } elseif ($totalbelanja >= 250000) {
-    echo "Selamat Anda Mendapatkan Diskon 25%";
-}
-else {
-    echo "Maaf Anda Tidak Mendapatkan Diskon";
+    $discon = 0.1 * $totalbelanja;
+} else {
+    $discon = 0;
 }
 
+echo "Total:" . $totalbelanja . "<br>" ;
+echo "Discount :" . $discon . "<br>";
+echo "Total After Discount :" . ($totalbelanja - $discon) . "<br>";
