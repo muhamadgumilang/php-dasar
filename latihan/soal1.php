@@ -11,3 +11,8 @@ if ($nilai >= 95) {
 } else {
     echo "tidak lulus ";
 }
+
+
+
+
+
